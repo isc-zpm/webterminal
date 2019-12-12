@@ -9,27 +9,6 @@
       <Packaging>module</Packaging>
       <SourcesRoot>build</SourcesRoot>
       <Resource Name="WebTerminal.PKG" />
-      <CSPApplication 
-        Url="/terminal"
-        Path="/build/client"
-        Directory="{$cspdir}/terminal"
-        DispatchClass="WebTerminal.Router"
-        ServeFiles="1"
-        Recurse="1"
-        PasswordAuthEnabled="1"
-        UnauthenticatedEnabled="0"
-        CookiePath="/"
-      />
-      <CSPApplication 
-        Url="/terminalsocket"
-        Path="/terminal"
-        Directory="{$cspdir}/terminalsocket"
-        ServeFiles="0"
-        UnauthenticatedEnabled="1"
-        MatchRoles=":%DB_CACHESYS:%DB_IRISSYS:{$dbrole}"
-        Recurse="1"
-        CookiePath="/"
-      />
     </Module>
   </Document>
 </Export>
